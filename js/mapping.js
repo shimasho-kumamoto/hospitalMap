@@ -4,12 +4,23 @@
 //GPSデータの取得
 var map;
 
-var deflat = 34.830156;
-var deflng = 138.173407;
+var deflat = 33.229117;
+var deflng = 130.825562;
+
+function initMap() {
+  var myLatLng={lat: 33.229117, lng: 130.825562};
+
+  //mapを表示
+  map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 8,
+    center: myLatLng
+  });
+}
 
 //------------------------------------------------------------------------------------------------------位置情報取得処理
 function start_func() {
-  get_location();
+  initialize(deflat, deflng);
+  /*get_location();*/
 }
 
 //位置情報を取得
@@ -44,7 +55,7 @@ function initialize(x, y) {
   };
 
   map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 14,
+    zoom: 8,
     center: myLatLng
   });
 }
