@@ -111,7 +111,7 @@ $(function() {
         datalist.push(new google.maps.LatLng(csvList[i][5], lng));
         var no = 1;
         //visitno.push(String(csvList[i][4]));
-        visitinfo.push('<div id="infowindow"><div id="title">' + csvList[i][1] + '</div></br><div id="tel">' + csvList[i][2] + '</div></br><a href="http://maps.google.com/maps?daddr=' + csvList[i][5] + ',' + csvList[i][6] + '&saddr=%E7%8F%BE%E5%9C%A8%E5%9C%B0&dirflg=d&t=m">　現在地からルート検索</a>');
+        visitinfo.push('<div id="infowindow"><div id="title">' + csvList[i][1] + '</div></br><div id="tel"><a href="tel:'+ csvList[i][2] +'">' + csvList[i][2] + '</a></div></br><a href="http://maps.google.com/maps?daddr=' + csvList[i][5] + ',' + csvList[i][6] + '&saddr=%E7%8F%BE%E5%9C%A8%E5%9C%B0&dirflg=d&t=m">　現在地からルート検索</a>');
       };
       $(target).append(insert);
     }
